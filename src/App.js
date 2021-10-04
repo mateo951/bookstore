@@ -1,13 +1,24 @@
-import './styles/App.css';
+import React from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation';
+import Categories from './components/categories/Categories';
+import List from './components/books/List';
+import Form from './components/books/Form';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Bookstore</h1>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <Navigation />
+
+    <Switch>
+      <Route path="/">
+        <List />
+        <Form />
+      </Route>
+      <Route path="/categories">
+        <Categories />
+      </Route>
+    </Switch>
+  </Router>
+);
 
 export default App;

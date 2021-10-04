@@ -1,0 +1,12 @@
+.booksList {
+  width: 85%;
+  margin: auto;
+  padding: 0;
+}
+
+.separation {
+  margin-top: 40px;
+  margin-left: 9%;
+  margin-right: 9%;
+  border: 2px solid #F3F3F3;
+}
