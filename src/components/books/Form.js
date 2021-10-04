@@ -1,5 +1,13 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import style from './form.module.css';
+
+const genres = [
+  'Adventure',
+  'Horror',
+  'Fiction',
+  'Non-Fiction',
+];
 
 const Form = () => (
   <div className={style.formContainer}>
@@ -7,10 +15,11 @@ const Form = () => (
     <form>
       <input type="text" placeholder="Enter title of book" />
       <select>
-        <option value="Adventure">Adventure</option>
-        <option value="Horror">Horror</option>
-        <option selected value="Fiction">Fiction</option>
-        <option value="Non-Fiction">Non-Fiction</option>
+        {
+          genres.map((genre) => (
+            <option key={uuidv4()} value={genre}>{genre}</option>
+          ))
+        }
       </select>
       <button type="button">Add Book</button>
     </form>

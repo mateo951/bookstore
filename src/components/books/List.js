@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import style from './list.module.css';
 import Book from './Book';
 
@@ -14,7 +15,7 @@ const List = () => (
       {
       demoBooks.map((bookObj) => (
         <Book
-          key={bookObj.id}
+          key={uuidv4()}
           title={bookObj.title}
           author={bookObj.author}
           genre={bookObj.genre}

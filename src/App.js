@@ -1,16 +1,15 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './components/navigation/Navigation';
 import Categories from './components/categories/Categories';
 import List from './components/books/List';
 import Form from './components/books/Form';
 
 const App = () => (
-  <Router>
+  <Router path="/">
     <Navigation />
-
     <Switch>
-      <Route path="/">
+      <Route exact path="/">
         <List />
         <Form />
       </Route>
