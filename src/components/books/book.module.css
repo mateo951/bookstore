@@ -10,3 +10,7 @@
   list-style-type: none;
   margin: 20px;
 }
+
+.hideId {
+  display: none;
+}

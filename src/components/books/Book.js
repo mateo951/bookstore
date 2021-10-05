@@ -1,14 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './book.module.css';
 import BookActions from './BookActions';
 
-const book = ({ title, author, genre }) => (
+const Book = ({
+  id, title, author, genre,
+}) => (
   <li className={style.listItems}>
+    <p className={style.hideId}>{id}</p>
     <p>{title}</p>
     <p>{author}</p>
     <p>{genre}</p>
-    <BookActions />
+    <BookActions id={id} />
   </li>
 );
 
-export default book;
+Book.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
+};
+
+export default Book;
