@@ -1,0 +1,31 @@
+
+.navContainer {
+  height: 6.25rem;
+}
+
+.navlinks {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 13px;
+  gap: 30px;
+}
+
+.title {
+  margin-left: 6.5rem;
+  font-size: 35px;
+  color: dodgerblue;
+  text-decoration: none !important;
+}
+
+.listitems {
+  color: darkslategray;
+  text-decoration: none;
+  float: left;
+  line-height: 15px;
+}
+
+.listitems:hover { -webkit-transform: scale(1.2); }

@@ -1,0 +1,9 @@
+* {
+  text-align: start;
+}
+
+.formContainer {
+  margin-left: 9%;
+  margin-right: 9%;
+  margin-bottom: 50px;
+}
