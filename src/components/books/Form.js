@@ -13,11 +13,22 @@ const genres = [
 
 const Form = () => {
   const dispatch = useDispatch();
-  const submitBookToStore = (e) => {
+  const [state, setState] = React.useState({
+    title: '',
+    author: '',
+    genre: '',
+  });
+
+  const handleChange = (e) => {
+    setState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const submitBookToStore = () => {
     const id = uuidv4();
-    const title = e[0].value;
-    const author = e[1].value;
-    const genre = e[2].value;
+    const { title, author, genre } = state;
     const newBook = {
       id,
       title,
@@ -31,12 +42,12 @@ const Form = () => {
       <p>ADD NEW BOOK</p>
       <form onSubmit={(e) => {
         e.preventDefault();
-        submitBookToStore(e.target);
+        submitBookToStore();
       }}
       >
-        <input type="text" placeholder="Enter title of book" required />
-        <input type="text" placeholder="Enter author of book" required />
-        <select name="genre">
+        <input type="text" value={state.title} name="title" onChange={handleChange} placeholder="Enter title of book" required />
+        <input type="text" value={state.author} name="author" onChange={handleChange} placeholder="Enter author of book" required />
+        <select name="genre" value={state.genre} onChange={handleChange}>
           {
             genres.map((genre) => (
               <option key={uuidv4()} value={genre}>{genre}</option>
