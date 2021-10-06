@@ -34,9 +34,7 @@ export const fetchBooks = () => (dispatch) => {
     });
 };
 const postBook = (book) => {
-  axios.post(apiURL, book).then(() => {
-    console.log('Posted book');
-  });
+  axios.post(apiURL, book);
 };
 
 const deleteBook = (id) => {

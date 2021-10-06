@@ -34,7 +34,6 @@ const Form = () => {
       title,
       category,
     };
-    console.log(newBook);
     dispatch(addBook(newBook));
   };
   return (
