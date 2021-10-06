@@ -1,21 +1,25 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import style from './list.module.css';
 import Book from './Book';
+import { fetchBooks } from '../../redux/books/books';
 
 const List = () => {
-  const booksList = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+  const { books } = useSelector((state) => state.books);
   return (
     <div>
       <ul className={style.booksList}>
         {
-          booksList.map((bookObj) => (
+          books.map((bookObj) => (
             <Book
-              key={bookObj.id}
-              id={bookObj.id}
+              key={bookObj.item_id}
+              item_id={bookObj.item_id}
               title={bookObj.title}
-              author={bookObj.author}
-              genre={bookObj.genre}
+              category={bookObj.category}
             />
           ))
         }
