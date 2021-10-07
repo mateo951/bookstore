@@ -1,24 +1,25 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../redux/books/books';
+import { fetchDeleteBook } from '../../redux/books/books';
 
-const BookActions = ({ id }) => {
+const BookActions = ({ item_id }) => {
   const dispatch = useDispatch();
   const removeBookFromStore = (bookId) => {
-    dispatch(removeBook(bookId));
+    dispatch(fetchDeleteBook(bookId));
   };
   return (
     <div>
       <button type="button">Comment</button>
-      <button type="button" onClick={() => removeBookFromStore(id)}>Remove</button>
+      <button type="button" onClick={() => removeBookFromStore(item_id)}>Remove</button>
       <button type="button">Edit</button>
     </div>
   );
 };
 
 BookActions.propTypes = {
-  id: PropTypes.string.isRequired,
+  item_id: PropTypes.string.isRequired,
 };
 
 export default BookActions;

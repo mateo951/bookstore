@@ -1,10 +1,11 @@
+/* eslint-disable camelcase */
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import style from './form.module.css';
-import { addBook } from '../../redux/books/books';
+import { fetchAddBook } from '../../redux/books/books';
 
-const genres = [
+const categories = [
   'Adventure',
   'Horror',
   'Fiction',
@@ -15,8 +16,7 @@ const Form = () => {
   const dispatch = useDispatch();
   const [state, setState] = React.useState({
     title: '',
-    author: '',
-    genre: '',
+    category: 'Adventure',
   });
 
   const handleChange = (e) => {
@@ -27,15 +27,14 @@ const Form = () => {
   };
 
   const submitBookToStore = () => {
-    const id = uuidv4();
-    const { title, author, genre } = state;
+    const item_id = uuidv4();
+    const { title, category } = state;
     const newBook = {
-      id,
+      item_id,
       title,
-      author,
-      genre,
+      category,
     };
-    dispatch(addBook(newBook));
+    dispatch(fetchAddBook(newBook));
   };
   return (
     <div className={style.formContainer}>
@@ -46,11 +45,10 @@ const Form = () => {
       }}
       >
         <input type="text" value={state.title} name="title" onChange={handleChange} placeholder="Enter title of book" required />
-        <input type="text" value={state.author} name="author" onChange={handleChange} placeholder="Enter author of book" required />
-        <select name="genre" value={state.genre} onChange={handleChange}>
+        <select name="category" value={state.category} onChange={handleChange}>
           {
-            genres.map((genre) => (
-              <option key={uuidv4()} value={genre}>{genre}</option>
+            categories.map((category) => (
+              <option key={uuidv4()} value={category}>{category}</option>
             ))
           }
         </select>
