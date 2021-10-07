@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from './list.module.css';
 import Book from './Book';
-import { fetchBooks } from '../../redux/books/books';
+import { fetchGetBooks } from '../../redux/books/books';
 
 const List = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchBooks());
+    dispatch(fetchGetBooks());
   }, []);
   const { books } = useSelector((state) => state.books);
   return (

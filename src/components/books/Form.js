@@ -3,7 +3,7 @@ import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import style from './form.module.css';
-import { addBook } from '../../redux/books/books';
+import { fetchAddBook } from '../../redux/books/books';
 
 const categories = [
   'Adventure',
@@ -34,7 +34,7 @@ const Form = () => {
       title,
       category,
     };
-    dispatch(addBook(newBook));
+    dispatch(fetchAddBook(newBook));
   };
   return (
     <div className={style.formContainer}>
