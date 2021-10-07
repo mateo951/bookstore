@@ -29,3 +29,21 @@
 }
 
 .listitems:hover { -webkit-transform: scale(1.2); }
+
+.oval {
+  width: 2.813rem;
+  height: 2.813rem;
+  float: right;
+  border: solid 1px gray;
+  border-radius: 40px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.user {
+  width: 24px;
+  margin: auto;
+  display: block;
+}

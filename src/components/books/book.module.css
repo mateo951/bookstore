@@ -1,16 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap');
+
 .listItems {
   height: 10rem;
   background-color: white;
   border-radius: 2px;
   border: 1px solid #f3f3f3;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   text-decoration: none;
   list-style-type: none;
-  margin: 20px;
+  margin: 14px;
 }
 
 .hideId {
   display: none;
+}
+
+.CircularProgressbar {
+  width: 100px !important;
+}
+
+.divWidth {
+  padding-left: 20px;
+  width: 40%;
+}
+
+.divProgres {
+  width: 30%;
+  display: flex;
+}
+
+.progressDetail {
+  width: 30%;
+  margin-left: 20px;
+}
+
+.category {
+  width: 100%;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  width: 100%;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  width: 100%;
+  height: 1.188rem;
+  margin: 0 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.divProgresDetail {
+  margin-left: 20px;
+}
+
+.percentComplete {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.63rem 5.75rem 0 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.completedText {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0;
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.lineseparator {
+  float: left;
+  height: 45%;
+  margin: 0 1.063rem 0 0.938rem;
+  border: solid 1px #e8e8e8;
+}
+
+.currentChapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  margin: 0.063rem 0 0 0;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.currentLesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 0 0.25rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.buttonProgress {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  color: white;
+}
+
+@media only screen and (max-width: 1100px) {
+  .divWidth {
+    max-width: 300px;
+  }
+
+  .divProgres {
+    max-width: 260px;
+  }
 }

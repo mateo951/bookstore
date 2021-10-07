@@ -1,6 +1,6 @@
 .booksList {
   width: 85%;
-  margin: auto;
+  margin: 50px auto 0 auto;
   padding: 0;
 }
 
@@ -9,4 +9,10 @@
   margin-left: 9%;
   margin-right: 9%;
   border: 2px solid #f3f3f3;
+}
+
+@media only screen and (max-width: 1100px) {
+  .booksList {
+    width: 97%;
+  }
 }

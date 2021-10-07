@@ -15,6 +15,7 @@ const Navigation = () => (
         CATEGORIES
       </NavLink>
     </ul>
+    <li className={style.oval}><img className={style.user} src="https://img.icons8.com/material-rounded/24/4a90e2/user.png" alt="" /></li>
   </nav>
 );
 
