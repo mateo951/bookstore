@@ -7,7 +7,7 @@
   border-radius: 2px;
   border: 1px solid #f3f3f3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
   list-style-type: none;
@@ -24,16 +24,16 @@
 
 .divWidth {
   padding-left: 20px;
-  width: 40%;
+  max-width: 400px;
 }
 
 .divProgres {
-  width: 30%;
+  max-width: 360px;
   display: flex;
 }
 
 .progressDetail {
-  width: 30%;
+  width: 400px;
   margin-left: 20px;
 }
 
@@ -160,7 +160,7 @@
   color: white;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
   .divWidth {
     max-width: 300px;
   }
