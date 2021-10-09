@@ -1,9 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
   text-align: start;
 }
 
 .formContainer {
-  margin-left: 9%;
-  margin-right: 9%;
-  margin-bottom: 50px;
+  width: 87%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.lessonPanel {
+  float: left;
+  width: 55%;
+  height: 1.5rem;
+  margin: 1.188rem 1.125rem 0 0;
+  padding: 0.6rem 5px 0.6rem 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 0 #888;
+  border: solid 1px #f3f3f3;
+  background-color: #fff;
+  color: black;
+}
+
+.lessonPanel2 {
+  width: 30%;
+  height: 2.7rem;
+  margin: 1.188rem 0 0 0;
+  padding: 0.6rem 5px 0.6rem 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 0 #888;
+  border: solid 1px #f3f3f3;
+  background-color: #fff;
+  color: black;
+}
+
+.submitButton {
+  font-family: 'Roboto Slab', serif;
+  width: 15%;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 1.125rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .formContainer {
+    width: 93%;
+  }
+
+  .lessonPanel {
+    width: 54%;
+  }
+
+  .lessonPanel2 {
+    width: 25%;
+  }
+
+  .submitButton {
+    width: 20%;
+  }
 }

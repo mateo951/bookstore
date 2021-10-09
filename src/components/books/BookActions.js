@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import style from './bookActions.module.css';
 import { fetchDeleteBook } from '../../redux/books/books';
 
 const BookActions = ({ item_id }) => {
@@ -10,10 +11,12 @@ const BookActions = ({ item_id }) => {
     dispatch(fetchDeleteBook(bookId));
   };
   return (
-    <div>
-      <button type="button">Comment</button>
-      <button type="button" onClick={() => removeBookFromStore(item_id)}>Remove</button>
-      <button type="button">Edit</button>
+    <div className={style.divMargin}>
+      <button className={style.actions} type="button">Comment</button>
+      <div className={style.lineseparator} />
+      <button className={style.actions} type="button" onClick={() => removeBookFromStore(item_id)}>Remove</button>
+      <div className={style.lineseparator} />
+      <button className={style.actions} type="button">Edit</button>
     </div>
   );
 };
