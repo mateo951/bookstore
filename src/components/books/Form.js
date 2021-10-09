@@ -40,10 +40,12 @@ const Form = () => {
   return (
     <div className={style.formContainer}>
       <p className={style.title}>ADD NEW BOOK</p>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        submitBookToStore();
-      }}
+      <form
+        className={style.form}
+        onSubmit={(e) => {
+          e.preventDefault();
+          submitBookToStore();
+        }}
       >
         <input max={30} className={style.lessonPanel} type="text" value={state.title} name="title" onChange={handleChange} placeholder="Book Title" required />
         <select className={style.lessonPanel2} name="category" value={state.category} onChange={handleChange}>

@@ -1,21 +1,32 @@
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #f3f3f3;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 88%;
+  margin: auto;
+}
 
 .navContainer {
   height: 6.25rem;
 }
 
 .navlinks {
-  width: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
   text-decoration: none;
   font-size: 13px;
-  gap: 30px;
+  flex-grow: 1;
+  gap: 2.563rem;
 }
 
 .title {
-  margin-left: 6.5rem;
   font-size: 35px;
   color: dodgerblue;
   text-decoration: none !important;
@@ -46,4 +57,10 @@
   width: 24px;
   margin: auto;
   display: block;
+}
+
+@media only screen and (max-width: 1100px) {
+  header nav {
+    width: 94%;
+  }
 }
