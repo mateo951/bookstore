@@ -24,17 +24,17 @@
 
 .divWidth {
   padding-left: 20px;
-  max-width: 400px;
+  width: 65% !important;
 }
 
 .divProgres {
-  max-width: 360px;
+  width: 240px;
   display: flex;
 }
 
 .progressDetail {
   width: 400px;
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 
 .category {
@@ -81,6 +81,7 @@
 }
 
 .divProgresDetail {
+  width: 143px;
   margin-left: 20px;
 }
 
@@ -160,12 +161,19 @@
   color: white;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1100px) {
   .divWidth {
-    max-width: 300px;
+    padding-left: 20px;
+    width: 40% !important;
   }
 
   .divProgres {
     max-width: 260px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .divWidth {
+    width: 35% !important;
   }
 }
